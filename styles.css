@@ -1,0 +1,444 @@
+:root {
+    --primary-color: #00695c; /* Verde escuro */
+    --secondary-color: #023059; /* Verde mais escuro */
+    --accent-color: #26a69a; /* Verde claro */
+    --background-color: #f0f4f3; /* Fundo claro */
+    --text-color: #333333; /* Cor principal do texto */
+    --heading-font: 'Montserrat', sans-serif; /* Fonte para títulos */
+    --body-font: 'Helvetica', sans-serif; /* Fonte para o corpo */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: var(--primary-color); /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Padding superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Permite posicionamento relativo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding-top: 40px;
+}
+
+header .hero-content {
+    max-width: 800px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding-top: 80px;
+}
+
+header h1 {
+    font-family: var(--heading-font); /* Fonte para o título */
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margem padrão */
+    line-height: 1.2; /* Melhora a legibilidade */
+}
+
+header p {
+    font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
+    margin: 10px 0 30px; /* Margem em cima e embaixo */
+}
+
+/* Estilo do menu */
+nav {
+    width: 100%; /* Ocupa toda a largura da tela */
+    background-color: var(--primary-color); /* Cor de fundo do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 10; /* Fica acima de outros elementos */
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove padding padrão */
+    display: flex; /* Exibe os itens em linha */
+    justify-content: center; /* Centraliza os itens do menu */
+}
+
+nav ul li {
+    margin: 0 20px; /* Margem entre os itens do menu */
+}
+
+nav ul li a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s ease; /* Transição suave para cor */
+}
+
+nav ul li a:hover {
+    color: var(--accent-color); /* Cor ao passar o mouse */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: justify; /* Justificando os textos por padrão */
+}
+
+/* Estilo padrão do menu */
+nav {
+    width: 100%; /* Garantir que o menu ocupe toda a largura */
+    background-color: var(--primary-color); /* Cor de fundo do menu */
+    position: relative; /* Permite z-index se necessário */
+}
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(85, 131, 85);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 6px 6px 5px rgb(159, 154, 154);
+        padding-top: 40px;
+        padding: 40px;
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+
+    nav.active .menu {
+        display: flex;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+
+    /* Estilo para menu hamburguer animado */
+    nav.active .menu-hamburger span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    nav.active .menu-hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav.active .menu-hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+}
+
+/* Estilo para o cabeçalho */
+header {
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    padding: 20px 0; /* Padding ajustado */
+}
+
+/* Alinhamento do conteúdo do cabeçalho */
+.hero-content {
+    margin-top: 20px; /* Espaço entre o menu e o conteúdo do cabeçalho */
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Seção de boas-vindas */
+.bem-vindos {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center; /* Centralizando os textos dessa seção */
+}
+
+.bem-vindos h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.bem-vindos p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Seção de Conscientização */
+.conscientizacao {
+    padding: 60px 20px;
+    background-color: #e0f2f1; /* Fundo similar à seção do mapa */
+    text-align: center;
+}
+
+.conscientizacao h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.conscientizacao p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+.resultado-sondagem {
+    padding: 60px 20px;
+    background-color:rgb(165, 164, 164) ;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.resultado-sondagem h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.resultado-sondagem p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f0f4f3;
+    text-align: center;
+}
+
+.grafico-resultados {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.grafico-resultados li {
+    background-color: #e0f2f1; /* Fundo claro para cada item */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--body-font);
+}
+
+.grafico-resultados li .percentual {
+    font-weight: bold;
+    color: red; /* Cor de destaque para os percentuais */
+}
+
+.imagem-cubos {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cubos */
+}
+
+.cubo {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: 300px; /* Ajuste o tamanho conforme necessário */
+    overflow: hidden;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cubo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o cubo */
+}
+
+/* Estilo das seções */
+section {
+    padding: 60px 20px;
+}
+
+section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Estilo para textos */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Estilo para as seções de conteúdo com imagens */
+.impacto-ambiental-content,
+.risco-saude-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.impacto-item,
+.risco-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.impacto-item:hover,
+.risco-item:hover {
+    transform: scale(1.02);
+}
+
+.imagem-impacto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Seção do Infográfico */
+.infografico {
+    text-align: center; /* Centralizando o conteúdo */
+}
+
+.infografico h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.infografico img {
+    display: block;
+    max-width: 50%; /* Reduzindo a imagem em 50% */
+    margin: 0 auto;
+    border-radius: 10px; /* Adicionando cantos arredondados */
+}
+
+.infografico ul {
+    margin-top: 20px;
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    text-align: left; /* Mantendo alinhado à esquerda */
+    display: inline-block; /* Mantém a lista no centro da página */
+}
+
+/* Estilo do Mapa */
+.mapa {
+    text-align: center; /* Centralizando a seção do mapa */
+    padding: 60px 20px; /* Adicionando padding para a seção */
+    background-color: #e0f2f1; /* Fundo claro para destaque */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: fadeIn 1s ease forwards; /* Animação de entrada da seção */
+}
+
+.mapa h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem; /* Aumentando o tamanho do título */
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Transformando o texto para maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    animation: slideIn 0.5s ease forwards; /* Animação de entrada do título */
+}
+
+.mapa h4 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: bold; /* Negrito para maior ênfase */
+    animation: fadeIn 1s ease forwards; /* Animação de entrada do subtítulo */
+}
+
+#mapa-descarte img {
+    width: 430px; /* Definindo a largura da imagem para 40% do original */
+    height: auto; /* Mantendo a proporção da imagem */
+    border-radius: 10px; /* Arredondando as bordas da imagem */
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Efeito de transformação ao passar o mouse */
+}
+
+#mapa-descarte img:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.mapa a {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px; /* Aumentando o padding para maior área clicável */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    text-decoration: none;
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+.mapa a:hover {
+    background-color: var(--secondary-color); /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para o Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
